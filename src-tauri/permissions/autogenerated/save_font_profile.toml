@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-save-font-profile"
+description = "Enables the save_font_profile command without any pre-configured scope."
+commands.allow = ["save_font_profile"]
+
+[[permission]]
+identifier = "deny-save-font-profile"
+description = "Denies the save_font_profile command without any pre-configured scope."
+commands.deny = ["save_font_profile"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-save-automation-program"
+description = "Enables the save_automation_program command without any pre-configured scope."
+commands.allow = ["save_automation_program"]
+
+[[permission]]
+identifier = "deny-save-automation-program"
+description = "Denies the save_automation_program command without any pre-configured scope."
+commands.deny = ["save_automation_program"]

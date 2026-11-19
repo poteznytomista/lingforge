@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-font"
+description = "Enables the preview_font command without any pre-configured scope."
+commands.allow = ["preview_font"]
+
+[[permission]]
+identifier = "deny-preview-font"
+description = "Denies the preview_font command without any pre-configured scope."
+commands.deny = ["preview_font"]

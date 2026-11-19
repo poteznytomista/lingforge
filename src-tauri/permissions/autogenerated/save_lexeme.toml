@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-save-lexeme"
+description = "Enables the save_lexeme command without any pre-configured scope."
+commands.allow = ["save_lexeme"]
+
+[[permission]]
+identifier = "deny-save-lexeme"
+description = "Denies the save_lexeme command without any pre-configured scope."
+commands.deny = ["save_lexeme"]

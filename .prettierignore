@@ -1,0 +1,17 @@
+node_modules
+dist
+target
+src-tauri/gen
+package-lock.json
+Cargo.lock
+test-results
+playwright-report
+public/fonts
+public/licenses
+docs/licenses
+.local-tools
+release-candidates
+
+website/_site
+website/downloads
+website/assets/licenses

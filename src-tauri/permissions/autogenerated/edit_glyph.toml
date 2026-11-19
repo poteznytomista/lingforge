@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-edit-glyph"
+description = "Enables the edit_glyph command without any pre-configured scope."
+commands.allow = ["edit_glyph"]
+
+[[permission]]
+identifier = "deny-edit-glyph"
+description = "Denies the edit_glyph command without any pre-configured scope."
+commands.deny = ["edit_glyph"]

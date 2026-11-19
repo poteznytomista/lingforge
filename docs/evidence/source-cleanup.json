@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-19",
+  "reason": "User requested removal of unnecessary debug, test output and caches after website preparation.",
+  "beforeAllocatedBytes": 7376633856,
+  "removed": [
+    {
+      "path": "target",
+      "allocatedBytes": 6433857536
+    },
+    {
+      "path": "node_modules",
+      "allocatedBytes": 298520576
+    },
+    {
+      "path": ".local-tools",
+      "allocatedBytes": 524046336
+    },
+    {
+      "path": "dist",
+      "allocatedBytes": 942080
+    },
+    {
+      "path": "test-results",
+      "allocatedBytes": 4169728
+    },
+    {
+      "path": "release-candidates",
+      "allocatedBytes": 835584
+    },
+    {
+      "path": "src-tauri/gen",
+      "allocatedBytes": 430080
+    },
+    {
+      "path": "website/_site",
+      "allocatedBytes": 212992
+    },
+    {
+      "path": "website/__pycache__",
+      "allocatedBytes": 12288
+    }
+  ],
+  "preserved": [
+    "application source and maintained tests/fixtures",
+    "website source, fonts and notices",
+    "verified AppImage in website/downloads",
+    "compact final validation reports and candidate provenance",
+    "project format/architecture documentation",
+    ".git",
+    ".agents",
+    ".codex",
+    ".aws"
+  ],
+  "oldDisposableProject": {
+    "id": "5c1d9ae2-8bd5-424b-8984-2b278d00c3de",
+    "name": "Native validation",
+    "revision": 0,
+    "integrity": "ok",
+    "contentRecords": 0,
+    "exclusiveLockHeld": true
+  },
+  "artifactSha256": "793260508f582463b3b9e4e331e38f50fd065b786736076471ab933dec9c6408",
+  "afterAllocatedBytes": 113606656,
+  "reclaimedAllocatedBytes": 7263027200
+}

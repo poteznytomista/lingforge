@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-automation"
+description = "Enables the preview_automation command without any pre-configured scope."
+commands.allow = ["preview_automation"]
+
+[[permission]]
+identifier = "deny-preview-automation"
+description = "Denies the preview_automation command without any pre-configured scope."
+commands.deny = ["preview_automation"]

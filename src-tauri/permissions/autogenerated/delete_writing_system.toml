@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-delete-writing-system"
+description = "Enables the delete_writing_system command without any pre-configured scope."
+commands.allow = ["delete_writing_system"]
+
+[[permission]]
+identifier = "deny-delete-writing-system"
+description = "Denies the delete_writing_system command without any pre-configured scope."
+commands.deny = ["delete_writing_system"]

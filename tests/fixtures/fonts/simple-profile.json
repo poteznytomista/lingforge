@@ -1,0 +1,63 @@
+{
+  "family": "LingForge Fixture",
+  "copyright": "LingForge test fixture contributors",
+  "license": "Test fixture outlines may be used for validation.",
+  "embedding": "restricted",
+  "metrics": {
+    "unitsPerEm": 1000,
+    "ascender": 800,
+    "descender": -200,
+    "lineGap": 0,
+    "sourceEm": 1000,
+    "sourceBaseline": 800
+  },
+  "glyphs": [
+    {
+      "characterId": "00000000-0000-4000-8000-000000000010",
+      "variantId": "00000000-0000-4000-8000-000000000100",
+      "codepoint": 57344,
+      "advance": 1000,
+      "mark": false,
+      "anchor": [500, 800]
+    },
+    {
+      "characterId": "00000000-0000-4000-8000-000000000011",
+      "variantId": "00000000-0000-4000-8000-000000000101",
+      "codepoint": 57345,
+      "advance": 1000,
+      "mark": false,
+      "anchor": [500, 800]
+    },
+    {
+      "characterId": "00000000-0000-4000-8000-000000000012",
+      "variantId": "00000000-0000-4000-8000-000000000102",
+      "codepoint": null,
+      "advance": 1000,
+      "mark": false,
+      "anchor": null
+    },
+    {
+      "characterId": "00000000-0000-4000-8000-000000000013",
+      "variantId": "00000000-0000-4000-8000-000000000103",
+      "codepoint": null,
+      "advance": 1000,
+      "mark": false,
+      "anchor": null
+    },
+    {
+      "characterId": "00000000-0000-4000-8000-000000000014",
+      "variantId": "00000000-0000-4000-8000-000000000104",
+      "codepoint": 769,
+      "advance": 0,
+      "mark": true,
+      "anchor": [50, 700]
+    }
+  ],
+  "contexts": [],
+  "ligatures": [],
+  "sample": [
+    "00000000-0000-4000-8000-000000000010",
+    "00000000-0000-4000-8000-000000000011"
+  ],
+  "direction": "ltr"
+}

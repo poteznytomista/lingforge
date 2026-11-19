@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-phonology-inventory"
+description = "Enables the phonology_inventory command without any pre-configured scope."
+commands.allow = ["phonology_inventory"]
+
+[[permission]]
+identifier = "deny-phonology-inventory"
+description = "Denies the phonology_inventory command without any pre-configured scope."
+commands.deny = ["phonology_inventory"]

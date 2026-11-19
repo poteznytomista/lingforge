@@ -1,0 +1,137 @@
+.phonology-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.phonology-page .section-title-row {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.inventory-panel,
+.phonology-editor {
+  padding: 28px;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.inventory-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.inventory-heading h2 {
+  font-size: 1.125rem;
+}
+.inventory-kinds {
+  margin: 20px 0;
+}
+.inventory-scroll {
+  overflow: auto;
+  max-height: 520px;
+}
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+.inventory-table caption {
+  text-align: left;
+  color: var(--text-muted);
+  padding: 0 0 16px;
+  line-height: 1.7;
+}
+.inventory-table th,
+.inventory-table td {
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid var(--border-default);
+  min-width: 130px;
+  max-width: 300px;
+  overflow-wrap: anywhere;
+}
+.inventory-table thead th {
+  font: 0.6875rem var(--font-mono);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--bg-input);
+}
+.inventory-table td {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.inventory-table tr[data-selected='true'] {
+  background: var(--accent-surface);
+}
+.phoneme-link {
+  border: 1px solid var(--border-default);
+  border-radius: 5px;
+  background: var(--bg-input);
+  padding: 8px 14px;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+.phoneme-link:hover:not(:disabled) {
+  border-color: var(--accent-border);
+  color: var(--accent-bright);
+}
+.phonology-editor input,
+.phonology-editor textarea {
+  font-family: var(--font-language);
+}
+.sequence-editor {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  min-width: 0;
+}
+.sequence-editor h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.sequence-preview {
+  padding: 14px;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--bg-input);
+  border-left: 2px solid var(--accent-border);
+}
+.sequence-editor ol {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 24px;
+}
+.sequence-editor li {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+  min-width: 0;
+}
+.sequence-editor li::marker {
+  color: var(--text-muted);
+  font: 0.75rem var(--font-mono);
+}
+.sequence-editor li .project-action-row {
+  margin-top: 12px;
+}
+.segment-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.125rem;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 680px) {
+  .inventory-panel,
+  .phonology-editor {
+    padding: 20px;
+  }
+  .sequence-editor {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-automation-batch"
+description = "Enables the automation_batch command without any pre-configured scope."
+commands.allow = ["automation_batch"]
+
+[[permission]]
+identifier = "deny-automation-batch"
+description = "Denies the automation_batch command without any pre-configured scope."
+commands.deny = ["automation_batch"]

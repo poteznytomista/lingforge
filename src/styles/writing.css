@@ -1,0 +1,204 @@
+.writing-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.writing-page .section-title-row {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.experiment-notice {
+  padding: 20px;
+  margin-bottom: 24px;
+  border-left: 2px solid var(--accent-border);
+  background: var(--accent-surface);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.8;
+}
+.experiment-notice .technical-badge {
+  display: block;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+.script-list,
+.script-editor {
+  padding: 28px;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.script-list h2 {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+.script-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+.script-list button,
+.symbol-palette button {
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  padding: 12px 16px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.script-list button[aria-current='true'] {
+  border-color: var(--accent-border);
+}
+.script-list small,
+.symbol-palette small {
+  display: block;
+  margin-top: 8px;
+  color: var(--text-muted);
+}
+.character-editor {
+  display: grid;
+  gap: 16px;
+}
+.glyph-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.glyph-variant {
+  display: grid;
+  gap: 12px;
+  max-width: 280px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+}
+.character-outline {
+  display: inline-block;
+  width: 2em;
+  height: 2.5em;
+  flex: none;
+  vertical-align: middle;
+  color: var(--text-primary);
+}
+.glyph-variant > .character-outline {
+  width: 5em;
+  height: 5em;
+}
+.character-links,
+.mapping-output {
+  display: grid;
+  gap: 10px;
+  padding-left: 20px;
+}
+.character-links li,
+.mapping-output li {
+  overflow-wrap: anywhere;
+}
+.character-links button,
+.mapping-output button {
+  margin-left: 14px;
+}
+.symbol-palette {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 260px;
+  overflow: auto;
+}
+.symbol-palette button {
+  min-width: 60px;
+  max-width: 150px;
+  text-align: center;
+}
+.character-fallback {
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
+}
+.symbol-canvas {
+  min-height: 150px;
+  max-height: 420px;
+  overflow: auto;
+  padding: 20px;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  background: var(--bg-input);
+  line-height: 3;
+  white-space: pre-wrap;
+}
+.symbol-canvas:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+.text-unit,
+.text-end {
+  display: inline-block;
+  padding: 4px 6px;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.literal-unit {
+  white-space: pre-wrap;
+  unicode-bidi: isolate;
+}
+.text-unit[data-newline='true'] {
+  display: block;
+  width: 100%;
+  text-align: left;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+.text-unit[data-selected='true'] {
+  background: var(--accent-surface);
+  outline: 1px solid var(--accent-border);
+}
+.text-unit[data-caret='true'],
+.text-end[data-caret='true'] {
+  border-left-color: var(--accent-bright);
+}
+.text-end {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.text-experiment {
+  display: grid;
+  gap: 16px;
+}
+.input-feedback {
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.input-feedback span {
+  display: block;
+}
+@media (max-width: 680px) {
+  .script-list,
+  .script-editor {
+    padding: 20px;
+  }
+  .symbol-canvas {
+    padding: 12px;
+  }
+}
+@media (forced-colors: active) {
+  .symbol-canvas:focus-visible {
+    outline-color: Highlight;
+  }
+  .text-unit[data-selected='true'] {
+    outline-color: Highlight;
+  }
+  .text-unit[data-caret='true'],
+  .text-end[data-caret='true'] {
+    border-left-color: Highlight;
+  }
+}

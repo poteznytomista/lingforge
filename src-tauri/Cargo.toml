@@ -1,0 +1,21 @@
+[package]
+name = "lingforge"
+version.workspace = true
+edition.workspace = true
+publish = false
+
+[lib]
+name = "lingforge_desktop"
+# Linux/Windows executables link the Rust library directly; no mobile/FFI targets.
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.7.4", features = [] }
+
+[dependencies]
+lingforge-font = { path = "../crates/lingforge-font" }
+lingforge-core = { path = "../crates/lingforge-core" }
+lingforge-storage = { path = "../crates/lingforge-storage" }
+serde.workspace = true
+tauri = { version = "=2.12.5", features = [] }
+tauri-plugin-dialog = "=2.8.4"

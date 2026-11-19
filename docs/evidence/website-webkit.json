@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "WebKit responsive widths without overflow",
+    "WebKit pointer and keyboard tabs",
+    "WebKit glyph variant",
+    "WebKit reduced motion",
+    "WebKit download button completes AppImage download",
+    "no WebKit page errors"
+  ]
+}

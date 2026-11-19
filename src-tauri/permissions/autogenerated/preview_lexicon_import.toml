@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-lexicon-import"
+description = "Enables the preview_lexicon_import command without any pre-configured scope."
+commands.allow = ["preview_lexicon_import"]
+
+[[permission]]
+identifier = "deny-preview-lexicon-import"
+description = "Denies the preview_lexicon_import command without any pre-configured scope."
+commands.deny = ["preview_lexicon_import"]

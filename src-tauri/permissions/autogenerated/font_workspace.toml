@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-font-workspace"
+description = "Enables the font_workspace command without any pre-configured scope."
+commands.allow = ["font_workspace"]
+
+[[permission]]
+identifier = "deny-font-workspace"
+description = "Denies the font_workspace command without any pre-configured scope."
+commands.deny = ["font_workspace"]

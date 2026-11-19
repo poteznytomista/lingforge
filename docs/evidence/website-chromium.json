@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "desktop loads with local fonts/assets",
+    "no horizontal overflow at 1440/1024/768/390/320",
+    "workspace tabs keyboard navigation and panels",
+    "glyph variant illustration switches with stable reference",
+    "motion pause persists on reload",
+    "OS reduced motion disables decorative animation",
+    "copy checksum writes exact hash",
+    "download button URL serves exact verified AppImage bytes",
+    "automated WCAG A/AA scan has no violations",
+    "launch help and notices work on mobile",
+    "content and download remain available without JavaScript",
+    "no browser errors or failed assets"
+  ]
+}

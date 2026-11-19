@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "status": "unverified-candidate",
+  "startedAt": "2026-11-17T16:45:42.599Z",
+  "collectedAt": "2026-11-17T16:53:08.481Z",
+  "version": "0.1.0",
+  "platform": "linux",
+  "arch": "x64",
+  "tools": {
+    "node": "24.22.3",
+    "npm": "12.2.2",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+    "rustHost": "x86_64-unknown-linux-gnu"
+  },
+  "inputs": {
+    "package.json": "ec2ddcb42f5dc24b2d93a984065a538fd1ab8b6f1239687f7ec3ebe9013aa5aa",
+    "package-lock.json": "86d321811e8468865f27c466ebc0292b7bdededab850e9828e3a1a903fa2a879",
+    "Cargo.toml": "c9e8bf54dad939f9c3433140a48d5f27f1a6be451ab25c59df3faaf686877d9b",
+    "Cargo.lock": "c0e675f740e4c6351e842055771229a4d83073a5616f38ae91d26e1c29c47405",
+    ".nvmrc": "584f19ccde29925286e32f566a2aa06c89efb4e2eb2bb2fc9ea5d56e2d190ac4",
+    "rust-toolchain.toml": "6b1cf8341d9a08d76c6deb1e9df90a0b208d0ef0d00ee05e0173e9cd4f0f425d",
+    "src-tauri/tauri.conf.json": "79cf3f841c71aa948cafc24467805a6e4937b692e577043e191827dfd634ad00",
+    "src-tauri/tauri.linux.conf.json": "1d04a903ba5231be13bda63a1d00237eb1f31f8a8965c0c283ce53db1e3b5584",
+    "src-tauri/tauri.windows.conf.json": "c51bc37e41e21b7aade95add34ab930351522708fb2fad07e59857d438008ae2"
+  },
+  "host": {
+    "release": "7.3.4-arch1-2",
+    "version": "#1 SMP PREEMPT_DYNAMIC Thu, 12 Nov 2026 20:11:37 +0000"
+  },
+  "artifact": {
+    "file": "LingForge_0.1.0_amd64.AppImage",
+    "bytes": 110717432,
+    "sha256": "793260508f582463b3b9e4e331e38f50fd065b786736076471ab933dec9c6408"
+  },
+  "buildBinary": {
+    "file": "lingforge",
+    "sha256": "3f728fe6a852f79e80488ac729a34fe14c9747790f3f2e3cd0b7d40dd8814991"
+  },
+  "workflowCommit": null,
+  "workflowRun": null,
+  "buildCommand": "npm run desktop:build -- --ci -- --locked",
+  "validation": "Not attested by this manifest. Attach the separate release checklist and actual logs.",
+  "signing": "Not inspected. Public distribution requires a signing decision and verification.",
+  "notices": "Bundled notices copied; resolved transitive license audit still required."
+}

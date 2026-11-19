@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-new-automation-identity"
+description = "Enables the new_automation_identity command without any pre-configured scope."
+commands.allow = ["new_automation_identity"]
+
+[[permission]]
+identifier = "deny-new-automation-identity"
+description = "Denies the new_automation_identity command without any pre-configured scope."
+commands.deny = ["new_automation_identity"]

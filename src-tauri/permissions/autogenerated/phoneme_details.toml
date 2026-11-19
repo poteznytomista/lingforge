@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-phoneme-details"
+description = "Enables the phoneme_details command without any pre-configured scope."
+commands.allow = ["phoneme_details"]
+
+[[permission]]
+identifier = "deny-phoneme-details"
+description = "Denies the phoneme_details command without any pre-configured scope."
+commands.deny = ["phoneme_details"]

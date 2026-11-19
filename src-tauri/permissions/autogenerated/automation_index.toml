@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-automation-index"
+description = "Enables the automation_index command without any pre-configured scope."
+commands.allow = ["automation_index"]
+
+[[permission]]
+identifier = "deny-automation-index"
+description = "Denies the automation_index command without any pre-configured scope."
+commands.deny = ["automation_index"]

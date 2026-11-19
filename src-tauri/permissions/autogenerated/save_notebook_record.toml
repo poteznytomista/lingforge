@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-save-notebook-record"
+description = "Enables the save_notebook_record command without any pre-configured scope."
+commands.allow = ["save_notebook_record"]
+
+[[permission]]
+identifier = "deny-save-notebook-record"
+description = "Denies the save_notebook_record command without any pre-configured scope."
+commands.deny = ["save_notebook_record"]

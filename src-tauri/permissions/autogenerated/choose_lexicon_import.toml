@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-choose-lexicon-import"
+description = "Enables the choose_lexicon_import command without any pre-configured scope."
+commands.allow = ["choose_lexicon_import"]
+
+[[permission]]
+identifier = "deny-choose-lexicon-import"
+description = "Denies the choose_lexicon_import command without any pre-configured scope."
+commands.deny = ["choose_lexicon_import"]

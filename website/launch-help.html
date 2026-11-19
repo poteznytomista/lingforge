@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080809" />
+    <title>Linux launch notes — LingForge</title>
+    <meta
+      name="description"
+      content="Install, verify and launch the experimental LingForge Linux AppImage."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="brand" href="./"
+        ><img src="assets/favicon.svg" width="28" height="28" alt="" /><span
+          >LINGFORGE</span
+        ></a
+      ><a class="button button-small" href="./#download">Download</a>
+    </header>
+    <main id="main" class="document-page section-shell">
+      <p class="eyebrow">LINUX / v0.1.0</p>
+      <h1>Your first launch.</h1>
+      <p>
+        LingForge 0.1.0 is an experimental Linux x86_64 AppImage. It was tested
+        on Arch Linux; compatibility with every Linux distribution is not
+        established. Windows downloads are not yet available.
+      </p>
+      <h2>Open the application</h2>
+      <p>
+        Download the AppImage, allow it to execute using your file manager’s
+        permissions control, and open it. You do not need Rust, Node.js, npm or
+        the source code. Your desktop still needs compatible Linux libraries and
+        graphics support. Some distributions need FUSE 2 compatibility; keep
+        existing FUSE 3 components intact.
+      </p>
+      <p>From the directory containing the download:</p>
+      <pre><code>chmod +x LingForge_0.1.0_amd64.AppImage
+./LingForge_0.1.0_amd64.AppImage</code></pre>
+      <h2>A blank window on NVIDIA</h2>
+      <p>The tested NVIDIA machine needs this WebKit rendering workaround:</p>
+      <pre><code>WEBKIT_DISABLE_DMABUF_RENDERER=1 ./LingForge_0.1.0_amd64.AppImage</code></pre>
+      <p>
+        This applies to that launch only. It has not been established as
+        necessary on other machines.
+      </p>
+      <h2>Launching from VS Code’s Snap terminal</h2>
+      <p>
+        Incompatible inherited GTK/GIO lookup paths interfered with native
+        testing. The successful launch removed them for the application process:
+      </p>
+      <pre><code>env -u GIO_MODULE_DIR -u GTK_PATH -u GTK_EXE_PREFIX -u GDK_PIXBUF_MODULE_FILE WEBKIT_DISABLE_DMABUF_RENDERER=1 ./LingForge_0.1.0_amd64.AppImage</code></pre>
+      <p>
+        Native automation additionally used <code>GDK_BACKEND=x11</code> under
+        KDE Wayland. File-manager launch and other display configurations still
+        need broader acceptance testing.
+      </p>
+      <h2>Check the download</h2>
+      <p>
+        The checksum identifies the tested file; it is not a digital signature.
+        Compare the output of:
+      </p>
+      <pre><code>sha256sum LingForge_0.1.0_amd64.AppImage</code></pre>
+      <p>Expected SHA-256:</p>
+      <pre><code>793260508f582463b3b9e4e331e38f50fd065b786736076471ab933dec9c6408</code></pre>
+      <p><a href="checksums.txt">Download the checksum file.</a></p>
+      <h2>Start with a disposable project</h2>
+      <p>
+        Choose New language and a parent folder you can write to. LingForge
+        creates a project folder there. Save explicitly with the editor’s Save
+        button or Ctrl+S. Keep your language folders separate from the AppImage.
+      </p>
+      <p>
+        Export a full project archive to back up or transfer saved work. Do not
+        copy the database alone while the app is using it. Recovery creates a
+        new copy. A forced shutdown can lose unsaved drafts; snapshots and undo
+        are different mechanisms.
+      </p>
+      <h2>Current boundaries</h2>
+      <p>
+        The Linux build passed 34 bounded native checks. Full desktop workflow
+        acceptance, real input-method composition, advanced drawing/shaping and
+        Windows remain unfinished. Writing, documents, grammar, fonts and rules
+        are experimental. Resources and PDF export are not available. Use
+        independent archives for anything important.
+      </p>
+      <p><a class="button" href="./">Back to LingForge</a></p>
+    </main>
+    <footer class="footer section-shell">
+      <span>LINGFORGE / LANGUAGE, BY DESIGN.</span>
+      <div>
+        <a href="launch-help.html">Launch help</a
+        ><a href="notices.html">Notices & privacy</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+.confirmation-dialog:has(.glyph-editor) {
+  width: min(1180px, calc(100vw - 32px));
+  max-width: 1180px;
+}
+.glyph-editor {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+.glyph-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.glyph-toolbar button[aria-pressed='true'] {
+  border-color: var(--accent-bright);
+  background: var(--accent-surface);
+}
+.glyph-canvas-area {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.glyph-canvas {
+  width: 100%;
+  height: clamp(260px, 48vh, 560px);
+  display: block;
+  background: var(--bg-input);
+  border: 1px solid var(--border-strong);
+  touch-action: none;
+  user-select: none;
+}
+.glyph-canvas[data-background='graphite'] {
+  background: #222223;
+}
+.glyph-canvas:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+.glyph-grid-line {
+  stroke: var(--border-default);
+  stroke-width: 1;
+}
+.glyph-frame {
+  stroke: var(--text-muted);
+  stroke-width: 1;
+  stroke-dasharray: 6 4;
+}
+.glyph-guides {
+  stroke: var(--accent-muted);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  opacity: 0.65;
+}
+.glyph-canvas[data-contrast='high'] .glyph-guides {
+  opacity: 1;
+  stroke: var(--accent-bright);
+  stroke-width: 2;
+}
+.glyph-canvas[data-contrast='high'] .glyph-grid-line {
+  stroke: var(--border-strong);
+}
+.glyph-drawing-path {
+  fill: var(--text-primary);
+  stroke: transparent;
+  stroke-width: 2;
+  cursor: pointer;
+}
+.glyph-drawing-path[data-selected='true'] {
+  stroke: var(--accent-bright);
+}
+.glyph-guide-label {
+  stroke: none;
+  fill: var(--accent-bright);
+  font-family: var(--font-mono);
+}
+.glyph-handle-lines {
+  stroke: var(--accent-bright);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+.glyph-handle {
+  fill: var(--bg-input);
+  stroke: var(--accent-bright);
+  stroke-width: 2;
+  cursor: grab;
+}
+.glyph-handle[data-control='true'] {
+  fill: var(--accent-surface);
+  stroke-dasharray: 2 2;
+}
+.glyph-handle[data-selected='true'] {
+  fill: var(--accent-bright);
+}
+.glyph-inspector {
+  display: grid;
+  gap: 16px;
+  border-top: 1px solid var(--border-default);
+  padding-top: 20px;
+  min-width: 0;
+}
+.glyph-number-fields,
+.glyph-setting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  align-items: end;
+  gap: 16px;
+}
+.glyph-number-fields > .project-action-row {
+  grid-column: 1 / -1;
+}
+.glyph-view-settings {
+  border: 1px solid var(--border-default);
+  padding: 16px;
+}
+.glyph-view-settings summary {
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+.glyph-view-settings > p,
+.glyph-setting-grid {
+  margin-top: 16px;
+}
+.glyph-view-settings summary:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+@media (max-width: 680px) {
+  .confirmation-dialog:has(.glyph-editor) {
+    width: calc(100vw - 16px);
+  }
+  .glyph-canvas {
+    height: 300px;
+  }
+}
+@media (forced-colors: active) {
+  .glyph-canvas {
+    forced-color-adjust: none;
+    background: Canvas;
+  }
+  .glyph-drawing-path {
+    fill: CanvasText;
+  }
+  .glyph-drawing-path[data-selected='true'],
+  .glyph-handle,
+  .glyph-handle-lines,
+  .glyph-guides {
+    stroke: Highlight;
+  }
+  .glyph-handle {
+    fill: Canvas;
+  }
+  .glyph-handle[data-selected='true'] {
+    fill: Highlight;
+  }
+  .glyph-grid-line,
+  .glyph-frame {
+    stroke: GrayText;
+  }
+}

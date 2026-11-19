@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-writing-systems"
+description = "Enables the writing_systems command without any pre-configured scope."
+commands.allow = ["writing_systems"]
+
+[[permission]]
+identifier = "deny-writing-systems"
+description = "Denies the writing_systems command without any pre-configured scope."
+commands.deny = ["writing_systems"]

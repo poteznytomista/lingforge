@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-transliterate-script"
+description = "Enables the transliterate_script command without any pre-configured scope."
+commands.allow = ["transliterate_script"]
+
+[[permission]]
+identifier = "deny-transliterate-script"
+description = "Denies the transliterate_script command without any pre-configured scope."
+commands.deny = ["transliterate_script"]

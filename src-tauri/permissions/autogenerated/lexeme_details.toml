@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-lexeme-details"
+description = "Enables the lexeme_details command without any pre-configured scope."
+commands.allow = ["lexeme_details"]
+
+[[permission]]
+identifier = "deny-lexeme-details"
+description = "Denies the lexeme_details command without any pre-configured scope."
+commands.deny = ["lexeme_details"]

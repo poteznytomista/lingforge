@@ -1,0 +1,97 @@
+{
+  "id": "00000000-0000-4000-8000-000000000001",
+  "revision": 0,
+  "data": {
+    "name": "Part 8 fixture",
+    "notes": "Test data only; never seeded into user projects.",
+    "characters": [
+      {
+        "id": "00000000-0000-4000-8000-000000000010",
+        "name": "Base",
+        "transliteration": "a",
+        "phonemeIds": [],
+        "glyphs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000100",
+            "name": "Base",
+            "outline": {
+              "viewBox": [0, 0, 1000, 1000],
+              "paths": ["M 100 800 L 500 100 L 900 800 Z"]
+            }
+          }
+        ],
+        "defaultGlyphId": "00000000-0000-4000-8000-000000000100"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000011",
+        "name": "Following",
+        "transliteration": "b",
+        "phonemeIds": [],
+        "glyphs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000101",
+            "name": "Following",
+            "outline": {
+              "viewBox": [0, 0, 1000, 1000],
+              "paths": ["M 100 800 L 100 100 L 800 800 Z"]
+            }
+          }
+        ],
+        "defaultGlyphId": "00000000-0000-4000-8000-000000000101"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000012",
+        "name": "Context alternate",
+        "transliteration": "c",
+        "phonemeIds": [],
+        "glyphs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000102",
+            "name": "Context alternate",
+            "outline": {
+              "viewBox": [0, 0, 1000, 1000],
+              "paths": ["M 100 800 Q 500 0 900 800 Z"]
+            }
+          }
+        ],
+        "defaultGlyphId": "00000000-0000-4000-8000-000000000102"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000013",
+        "name": "Ligature",
+        "transliteration": "d",
+        "phonemeIds": [],
+        "glyphs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000103",
+            "name": "Ligature",
+            "outline": {
+              "viewBox": [0, 0, 1000, 1000],
+              "paths": ["M 50 800 C 50 0 950 0 950 800 Z"]
+            }
+          }
+        ],
+        "defaultGlyphId": "00000000-0000-4000-8000-000000000103"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000014",
+        "name": "Accent",
+        "transliteration": "e",
+        "phonemeIds": [],
+        "glyphs": [
+          {
+            "id": "00000000-0000-4000-8000-000000000104",
+            "name": "Accent",
+            "outline": {
+              "viewBox": [0, 0, 1000, 1000],
+              "paths": ["M 0 0 L 100 100 L 160 100 L 60 0 Z"]
+            }
+          }
+        ],
+        "defaultGlyphId": "00000000-0000-4000-8000-000000000104"
+      }
+    ],
+    "mappings": [],
+    "sample": []
+  }
+}

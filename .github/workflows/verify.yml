@@ -1,0 +1,68 @@
+name: Verify and collect experimental desktop candidates
+
+# Execution authorized on 2026-11-17. Keep dispatch manual until reviewed
+# lockfiles, validated exact pins, and initial checks are complete.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - name: Install the recorded npm version
+        run: npm install --global npm@12.2.2
+      - name: Activate the repository Rust toolchain
+        run: rustup show active-toolchain
+      - name: Require reviewed locks and exact toolchain pins
+        run: npm run release:preflight
+      - name: Install Linux build prerequisites
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev build-essential curl wget file libxdo-dev libssl-dev librsvg2-dev patchelf
+      - name: Install locked frontend dependencies
+        run: npm ci
+      - name: Frontend format, lint, build and component checks
+        run: npm run check
+      - name: Packaging guard regression checks
+        run: npm run test:release
+      - name: Rust format, Clippy and workspace tests (locked)
+        run: npm run check:rust
+      - name: Install browser engines
+        if: runner.os == 'Linux'
+        run: npx --no-install playwright install --with-deps chromium webkit
+      - name: Browser checks (not native verification)
+        if: runner.os == 'Linux'
+        run: npm run test:ui
+      - name: Build and collect the platform candidate (locked)
+        run: npm run release:package
+      - name: Upload candidate and build evidence, including incomplete attempts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lingforge-candidate-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: release-candidates/
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Upload available browser failure evidence
+        if: failure() && runner.os == 'Linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-failures-${{ github.run_id }}-${{ github.run_attempt }}
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 14

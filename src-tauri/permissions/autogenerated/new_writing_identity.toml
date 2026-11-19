@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-new-writing-identity"
+description = "Enables the new_writing_identity command without any pre-configured scope."
+commands.allow = ["new_writing_identity"]
+
+[[permission]]
+identifier = "deny-new-writing-identity"
+description = "Denies the new_writing_identity command without any pre-configured scope."
+commands.deny = ["new_writing_identity"]

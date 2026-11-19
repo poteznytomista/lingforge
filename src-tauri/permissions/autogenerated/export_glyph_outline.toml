@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-export-glyph-outline"
+description = "Enables the export_glyph_outline command without any pre-configured scope."
+commands.allow = ["export_glyph_outline"]
+
+[[permission]]
+identifier = "deny-export-glyph-outline"
+description = "Denies the export_glyph_outline command without any pre-configured scope."
+commands.deny = ["export_glyph_outline"]

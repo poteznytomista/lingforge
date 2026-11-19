@@ -1,0 +1,21 @@
+[workspace]
+members = ["crates/lingforge-core", "crates/lingforge-storage", "crates/lingforge-font", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+
+[profile.dev]
+# Keep file/line backtraces without the much larger variable/type debug data.
+# The test profile inherits this setting; incremental compilation stays enabled.
+debug = "line-tables-only"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+strip = true

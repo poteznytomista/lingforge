@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-encode-glyph"
+description = "Enables the encode_glyph command without any pre-configured scope."
+commands.allow = ["encode_glyph"]
+
+[[permission]]
+identifier = "deny-encode-glyph"
+description = "Denies the encode_glyph command without any pre-configured scope."
+commands.deny = ["encode_glyph"]

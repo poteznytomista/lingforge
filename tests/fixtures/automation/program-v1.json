@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "name": "Automation test fixture",
+  "notes": "Test-only invented forms; never seeded into a user project.",
+  "input": "lemma",
+  "features": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "name": "Number",
+      "values": [
+        { "id": "00000000-0000-4000-8000-000000000002", "label": "Plural" }
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "id": "00000000-0000-4000-8000-000000000003",
+      "name": "Vowels",
+      "members": ["a", "e", "i", "o", "u"]
+    }
+  ],
+  "rules": [
+    {
+      "id": "00000000-0000-4000-8000-000000000004",
+      "name": "Plural suffix",
+      "operation": { "kind": "affix", "prefix": "", "suffix": "i" }
+    }
+  ],
+  "cells": [
+    {
+      "id": "00000000-0000-4000-8000-000000000005",
+      "name": "Plural",
+      "kind": "inflection",
+      "features": [
+        {
+          "featureId": "00000000-0000-4000-8000-000000000001",
+          "valueId": "00000000-0000-4000-8000-000000000002"
+        }
+      ],
+      "rules": ["00000000-0000-4000-8000-000000000004"]
+    }
+  ],
+  "overrides": [],
+  "phonotactics": []
+}

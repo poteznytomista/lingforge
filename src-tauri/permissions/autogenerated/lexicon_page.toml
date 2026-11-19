@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-lexicon-page"
+description = "Enables the lexicon_page command without any pre-configured scope."
+commands.allow = ["lexicon_page"]
+
+[[permission]]
+identifier = "deny-lexicon-page"
+description = "Denies the lexicon_page command without any pre-configured scope."
+commands.deny = ["lexicon_page"]

@@ -1,0 +1,112 @@
+.automation-page {
+  display: grid;
+  gap: var(--space-6);
+}
+.automation-list,
+.automation-editor,
+.automation-generation {
+  padding: var(--space-6);
+  min-width: 0;
+}
+.automation-list ul,
+.automation-entry-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.automation-list li,
+.automation-entry-list li,
+.automation-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--space-3);
+}
+.automation-list li > button:first-child {
+  text-align: left;
+  flex: 1;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-small);
+  padding: var(--space-3);
+  background: var(--bg-input);
+  overflow-wrap: anywhere;
+}
+.automation-list [aria-current='true'] {
+  border-color: var(--accent);
+}
+.automation-editor details,
+.automation-result details {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--border-default);
+}
+.automation-editor summary,
+.automation-result summary {
+  cursor: pointer;
+  color: var(--text-primary);
+  padding-bottom: var(--space-3);
+}
+.automation-editor summary:focus-visible,
+.automation-result summary:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+}
+.automation-definition,
+.automation-result {
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-medium);
+  padding: var(--space-4);
+  margin-block: var(--space-4);
+  background: var(--bg-input);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.automation-fields,
+.automation-sequence,
+.automation-results {
+  display: grid;
+  gap: var(--space-4);
+}
+.automation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+.automation-row .editor-field {
+  flex: 1;
+  min-width: 180px;
+}
+.automation-piece {
+  border-left: 2px solid var(--border-strong);
+  padding-left: var(--space-4);
+  margin-block: var(--space-4);
+  display: grid;
+  gap: var(--space-3);
+}
+.automation-cells {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+}
+.automation-result .language-text {
+  white-space: pre-wrap;
+}
+.automation-result code {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .automation-list,
+  .automation-editor,
+  .automation-generation {
+    padding: var(--space-4);
+  }
+  .automation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (forced-colors: active) {
+  .automation-list [aria-current='true'] {
+    outline: 2px solid Highlight;
+  }
+}

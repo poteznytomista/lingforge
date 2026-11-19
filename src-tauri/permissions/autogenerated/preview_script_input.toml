@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-script-input"
+description = "Enables the preview_script_input command without any pre-configured scope."
+commands.allow = ["preview_script_input"]
+
+[[permission]]
+identifier = "deny-preview-script-input"
+description = "Denies the preview_script_input command without any pre-configured scope."
+commands.deny = ["preview_script_input"]
